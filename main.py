@@ -11,6 +11,7 @@ while True:
     try :
         for line in data:
                 producer.send('depremTopic', value=line)
+                producer.flush()
     except Exception as e:
         print("Error")
 
